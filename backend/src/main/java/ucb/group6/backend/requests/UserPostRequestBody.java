@@ -18,7 +18,4 @@ public class UserPostRequestBody {
     @NotEmpty(message = "The password field cannot be empty")
     @Size(min = 6, message = "Password must have at least 6 characters")
     private String password;
-
-    @URL(message = "The url is not valid")
-    private String url;
 }

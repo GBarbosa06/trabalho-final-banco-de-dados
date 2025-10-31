@@ -29,7 +29,7 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity<User> register(@RequestBody @Valid UserPostRequestBody userPostRequestBody) {
-        return new ResponseEntity<>(service.register(userPostRequestBody), HttpStatus.valueOf(201));
+        return new ResponseEntity<>(service.register(userPostRequestBody), HttpStatus.CREATED);
     }
 
     @PostMapping("/login")

@@ -56,13 +56,13 @@ public class UserService {
     }
 
     public void update(UserPutRequestBody userPutRequestBody) throws BadRequestException {
-        User saverUser = findByIdOrThrowBadRequestException(userPutRequestBody.getId());
+        User savedUser = findByIdOrThrowBadRequestException(userPutRequestBody.getId());
         User user = UserMapper.INSTANCE.toUser(userPutRequestBody);
-        user.setId(saverUser.getId());
+        user.setId(savedUser.getId());
         if (user.getPassword() != null && !user.getPassword().isEmpty()) {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
         } else {
-            user.setPassword(saverUser.getPassword());
+            user.setPassword(savedUser.getPassword());
         }
         repository.save(user);
     }
