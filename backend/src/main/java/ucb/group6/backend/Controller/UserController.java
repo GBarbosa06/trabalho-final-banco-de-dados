@@ -55,7 +55,7 @@ public class UserController {
     }
 
     @PutMapping
-    public ResponseEntity<Void> update(@RequestBody UserPutRequestBody userPutRequestBody) {
+    public ResponseEntity<Void> update(@RequestBody @Valid UserPutRequestBody userPutRequestBody) {
         service.update(userPutRequestBody);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

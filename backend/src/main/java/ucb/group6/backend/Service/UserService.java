@@ -59,6 +59,11 @@ public class UserService {
         User saverUser = findByIdOrThrowBadRequestException(userPutRequestBody.getId());
         User user = UserMapper.INSTANCE.toUser(userPutRequestBody);
         user.setId(saverUser.getId());
+        if (user.getPassword() != null && !user.getPassword().isEmpty()) {
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+        } else {
+            user.setPassword(saverUser.getPassword());
+        }
         repository.save(user);
     }
 
