@@ -7,19 +7,27 @@ import ucb.group6.backend.repository.UserRepository;
 import ucb.group6.backend.requests.UserLoginRequestBody;
 import ucb.group6.backend.requests.UserPostRequestBody;
 import ucb.group6.backend.requests.UserPutRequestBody;
+import ucb.group6.backend.util.JwtUtil;
 import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 @Service
 public class UserService {
     private final UserRepository repository;
-    public UserService(UserRepository repository) {
+    private final PasswordEncoder passwordEncoder;
+    private final JwtUtil jwtUtil;
+
+    public UserService(UserRepository repository, PasswordEncoder passwordEncoder, JwtUtil jwtUtil) {
         this.repository = repository;
+        this.passwordEncoder = passwordEncoder;
+        this.jwtUtil = jwtUtil;
     }
 
     public List<User> listAll(){
@@ -38,7 +46,9 @@ public class UserService {
 
     @Transactional
     public User save(UserPostRequestBody userPostRequestBody){
-        return repository.save(UserMapper.INSTANCE.toUser(userPostRequestBody));
+        User user = UserMapper.INSTANCE.toUser(userPostRequestBody);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        return repository.save(user);
     }
 
     public void delete(long id) throws BadRequestException {
@@ -60,30 +70,24 @@ public class UserService {
             throw new BadRequestException("Email already used");
         }
 
-        if (user.getPassword().length() < 6){
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Password must be at least 6 characters");
-
+        // Strengthened password policy: at least 8 characters, one uppercase, one lowercase, one digit
+        Pattern passwordPattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$");
+        if (!passwordPattern.matcher(user.getPassword()).matches()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit");
         }
 
         return save(userPostRequestBody);
     }
 
-    public User login(UserLoginRequestBody userLoginRequestBody) throws BadRequestException {
+    public String login(UserLoginRequestBody userLoginRequestBody) throws BadRequestException {
         User user = UserMapper.INSTANCE.toUser(userLoginRequestBody);
         Optional<User> searchedUser = repository.findByEmail(user.getEmail());
 
-        if (searchedUser.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "User not found");
-
+        if (searchedUser.isEmpty() || !passwordEncoder.matches(user.getPassword(), searchedUser.get().getPassword())) {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid credentials");
         }
 
         User u = searchedUser.get();
-        // use BCryptPasswordEncoder
-        if (!u.getPassword().equals(user.getPassword())) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Incorrect password");
-
-        }
-        u.setPassword("hidden");
-        return u;
+        return jwtUtil.generateToken(u.getEmail());
     }
 }

@@ -33,8 +33,9 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<User> login(@RequestBody @Valid UserLoginRequestBody userLoginRequestBody) {
-        return new ResponseEntity<>(service.login(userLoginRequestBody), HttpStatus.valueOf(200));
+    public ResponseEntity<String> login(@RequestBody @Valid UserLoginRequestBody userLoginRequestBody) {
+        String token = service.login(userLoginRequestBody);
+        return ResponseEntity.ok(token);
     }
 
     @GetMapping
