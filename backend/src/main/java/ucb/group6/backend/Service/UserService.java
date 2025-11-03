@@ -75,14 +75,24 @@ public class UserService {
             throw new BadRequestException("Email already used");
         }
 
+        if (user.getEmail() == null || user.getEmail().isBlank()) {
+            throw new IllegalArgumentException("Email cannot be null.");
+        }
+
+        if (user.getPassword() == null || user.getPassword().isBlank()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Password cannot be null or empty");
+        }
+
         // Strengthened password policy: at least 8 characters, one uppercase, one lowercase, one digit
         Pattern passwordPattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$");
         if (!passwordPattern.matcher(user.getPassword()).matches()) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                    "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit");
         }
 
         return save(userPostRequestBody);
     }
+
 
     public String login(UserLoginRequestBody userLoginRequestBody) throws BadRequestException {
         User user = UserMapper.INSTANCE.toUser(userLoginRequestBody);
