@@ -22,10 +22,10 @@ public class UserController {
     }
 
 
-    @PostMapping
-    public ResponseEntity<User> save(@RequestBody @Valid UserPostRequestBody userPostRequestBody){
-        return new ResponseEntity<>(service.save(userPostRequestBody), HttpStatus.CREATED);
-    }
+//    @PostMapping
+//    public ResponseEntity<User> save(@RequestBody @Valid UserPostRequestBody userPostRequestBody){
+//        return new ResponseEntity<>(service.save(userPostRequestBody), HttpStatus.CREATED);
+//    }
 
     @PostMapping("/register")
     public ResponseEntity<User> register(@Valid @RequestBody UserPostRequestBody userPostRequestBody) {
