@@ -1,7 +1,6 @@
 package ucb.group6.backend.Service;
 
 import ucb.group6.backend.exception.BadRequestException;
-import ucb.group6.backend.mapper.UserMapper;
 import ucb.group6.backend.model.User;
 import ucb.group6.backend.repository.UserRepository;
 import ucb.group6.backend.requests.UserLoginRequestBody;
@@ -21,13 +20,11 @@ import java.util.regex.Pattern;
 @Service
 public class UserService {
     private final UserRepository repository;
-    private final UserMapper userMapper;
     private final PasswordEncoder passwordEncoder;
     private final JwtUtil jwtUtil;
 
-    public UserService(UserRepository repository, UserMapper userMapper, PasswordEncoder passwordEncoder, JwtUtil jwtUtil) {
+    public UserService(UserRepository repository, PasswordEncoder passwordEncoder, JwtUtil jwtUtil) {
         this.repository = repository;
-        this.userMapper = userMapper;
         this.passwordEncoder = passwordEncoder;
         this.jwtUtil = jwtUtil;
     }
@@ -48,7 +45,10 @@ public class UserService {
 
     @Transactional
     public User save(UserPostRequestBody userPostRequestBody){
-        User user = userMapper.toUser(userPostRequestBody);
+        User user = new User();
+        user.setName(userPostRequestBody.getName());
+        user.setEmail(userPostRequestBody.getEmail());
+        user.setPassword(userPostRequestBody.getPassword());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return repository.save(user);
     }
