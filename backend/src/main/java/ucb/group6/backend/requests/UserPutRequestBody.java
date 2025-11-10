@@ -15,4 +15,8 @@ public class UserPutRequestBody {
     private String email;
 
     private String password;
+
+    private Integer groupId;
+
+    private Boolean active;
 }

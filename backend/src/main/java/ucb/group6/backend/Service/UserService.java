@@ -49,6 +49,9 @@ public class UserService {
         user.setName(userPostRequestBody.getName());
         user.setEmail(userPostRequestBody.getEmail());
         user.setPassword(userPostRequestBody.getPassword());
+        user.setGroupId(userPostRequestBody.getGroupId() != null ? userPostRequestBody.getGroupId() : 2);
+        user.setActive(true);
+        user.setRegistrationDate(java.time.LocalDateTime.now());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return repository.save(user);
     }
@@ -72,6 +75,14 @@ public class UserService {
             savedUser.setPassword(passwordEncoder.encode(userPutRequestBody.getPassword()));
         }
 
+        if (userPutRequestBody.getGroupId() != null) {
+            savedUser.setGroupId(userPutRequestBody.getGroupId());
+        }
+
+        if (userPutRequestBody.getActive() != null) {
+            savedUser.setActive(userPutRequestBody.getActive());
+        }
+
         repository.save(savedUser);
     }
 
@@ -80,6 +91,9 @@ public class UserService {
         user.setName(userPostRequestBody.getName());
         user.setEmail(userPostRequestBody.getEmail());
         user.setPassword(userPostRequestBody.getPassword());
+        user.setGroupId(userPostRequestBody.getGroupId() != null ? userPostRequestBody.getGroupId() : 2);
+        user.setActive(true);
+        user.setRegistrationDate(java.time.LocalDateTime.now());
 
         if (user.getEmail() == null || user.getEmail().isBlank()) {
             throw new IllegalArgumentException("Email cannot be null.");
