@@ -4,14 +4,13 @@ services:
     container_name: mysql_backend
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root # apenas para inicializar, não será usado pela app
-      MYSQL_DATABASE: usuarios_db
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sistema_db
     ports:
       - "3306:3306"
     volumes:
       - group6:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
-    command: --default-authentication-plugin=mysql_native_password
 
 volumes:
   group6:
