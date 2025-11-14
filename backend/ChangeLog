@@ -1,4 +1,0 @@
-03/11 - Guilherme
-Login Funcionando. O mapeamento não usa mais o mapper, talvez erro no pom ou algo assim,
---> REMOVER MAPPER E MAPSTRUCT
---> REVER REGRAS DE NEGÓCIO DO PROJETO
