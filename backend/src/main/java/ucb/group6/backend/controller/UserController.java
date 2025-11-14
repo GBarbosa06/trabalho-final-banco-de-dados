@@ -1,6 +1,6 @@
-package ucb.group6.backend.Controller;
+package ucb.group6.backend.controller;
 
-import ucb.group6.backend.Service.UserService;
+import ucb.group6.backend.service.UserService;
 import ucb.group6.backend.model.User;
 import ucb.group6.backend.requests.UserLoginRequestBody;
 import ucb.group6.backend.requests.UserPostRequestBody;

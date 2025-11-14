@@ -1,4 +1,4 @@
-package ucb.group6.backend.Service;
+package ucb.group6.backend.service;
 
 import ucb.group6.backend.exception.BadRequestException;
 import ucb.group6.backend.model.User;
