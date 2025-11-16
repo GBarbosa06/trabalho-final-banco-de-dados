@@ -1,0 +1,273 @@
+[
+  {
+    "_id": 1,
+    "nome": "A Bela e a Fera",
+    "editora": "HarperCollins",
+    "autora": "Jeanne-Marie Leprince de Beaumont",
+    "data_lancamento": "1756-01-01T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 5
+  },
+  {
+    "_id": 2,
+    "nome": "Crepúsculo",
+    "editora": "Little, Brown and Company",
+    "autora": "Stephenie Meyer",
+    "data_lancamento": "2005-10-05T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 2
+  },
+  {
+    "_id": 3,
+    "nome": "Lua Nova",
+    "editora": "Little, Brown and Company",
+    "autora": "Stephenie Meyer",
+    "data_lancamento": "2006-09-06T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 4
+  },
+  {
+    "_id": 4,
+    "nome": "Eclipse",
+    "editora": "Little, Brown and Company",
+    "autora": "Stephenie Meyer",
+    "data_lancamento": "2007-08-07T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 3
+  },
+  {
+    "_id": 5,
+    "nome": "Amanhecer",
+    "editora": "Little, Brown and Company",
+    "autora": "Stephenie Meyer",
+    "data_lancamento": "2008-08-02T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 6
+  },
+  {
+    "_id": 6,
+    "nome": "Um Caso Perdido",
+    "editora": "Galera Record",
+    "autora": "Colleen Hoover",
+    "data_lancamento": "2012-12-31T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 4
+  },
+  {
+    "_id": 7,
+    "nome": "O Lado Feio do Amor",
+    "editora": "Atria Books",
+    "autora": "Colleen Hoover",
+    "data_lancamento": "2014-08-05T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 5
+  },
+  {
+    "_id": 8,
+    "nome": "É Assim que Acaba",
+    "editora": "Atria Books",
+    "autora": "Colleen Hoover",
+    "data_lancamento": "2016-08-02T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 7
+  },
+  {
+    "_id": 9,
+    "nome": "É Assim que Começa",
+    "editora": "Atria Books",
+    "autora": "Colleen Hoover",
+    "data_lancamento": "2022-10-18T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 4
+  },
+  {
+    "_id": 10,
+    "nome": "A Seleção",
+    "editora": "Seguinte",
+    "autora": "Kiera Cass",
+    "data_lancamento": "2012-04-24T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 6
+  },
+  {
+    "_id": 11,
+    "nome": "A Elite",
+    "editora": "Seguinte",
+    "autora": "Kiera Cass",
+    "data_lancamento": "2013-04-23T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 3
+  },
+  {
+    "_id": 12,
+    "nome": "A Escolha",
+    "editora": "Seguinte",
+    "autora": "Kiera Cass",
+    "data_lancamento": "2014-05-06T00:00:00Z",
+    "categoria": "Romance",
+    "quantidade_estoque": 8
+  },
+  {
+    "_id": 13,
+    "nome": "Trono de Vidro",
+    "editora": "Bloomsbury",
+    "autora": "Sarah J. Maas",
+    "data_lancamento": "2012-08-07T00:00:00Z",
+    "categoria": "Fantasia",
+    "quantidade_estoque": 5
+  },
+  {
+    "_id": 14,
+    "nome": "Corte de Espinhos e Rosas",
+    "editora": "Bloomsbury",
+    "autora": "Sarah J. Maas",
+    "data_lancamento": "2015-05-05T00:00:00Z",
+    "categoria": "Fantasia",
+    "quantidade_estoque": 7
+  },
+  {
+    "_id": 15,
+    "nome": "O Senhor dos Anéis: A Sociedade do Anel",
+    "editora": "HarperCollins",
+    "autora": "J.R.R. Tolkien",
+    "data_lancamento": "1954-07-29T00:00:00Z",
+    "categoria": "Fantasia",
+    "quantidade_estoque": 10
+  },
+  {
+    "_id": 16,
+    "nome": "O Senhor dos Anéis: As Duas Torres",
+    "editora": "HarperCollins",
+    "autora": "J.R.R. Tolkien",
+    "data_lancamento": "1954-11-11T00:00:00Z",
+    "categoria": "Fantasia",
+    "quantidade_estoque": 6
+  },
+  {
+    "_id": 17,
+    "nome": "O Senhor dos Anéis: O Retorno do Rei",
+    "editora": "HarperCollins",
+    "autora": "J.R.R. Tolkien",
+    "data_lancamento": "1955-10-20T00:00:00Z",
+    "categoria": "Fantasia",
+    "quantidade_estoque": 6
+  },
+  {
+    "_id": 18,
+    "nome": "O Nome do Vento",
+    "editora": "Arqueiro",
+    "autora": "Patrick Rothfuss",
+    "data_lancamento": "2007-03-27T00:00:00Z",
+    "categoria": "Fantasia",
+    "quantidade_estoque": 9
+  },
+  {
+    "_id": 19,
+    "nome": "A Filha das Profundezes",
+    "editora": "Intrínseca",
+    "autora": "Rick Riordan",
+    "data_lancamento": "2021-10-05T00:00:00Z",
+    "categoria": "Fantasia",
+    "quantidade_estoque": 5
+  },
+  {
+    "_id": 20,
+    "nome": "A Rainha Vermelha",
+    "editora": "Seguinte",
+    "autora": "Victoria Aveyard",
+    "data_lancamento": "2015-02-10T00:00:00Z",
+    "categoria": "Fantasia",
+    "quantidade_estoque": 8
+  },
+  {
+    "_id": 21,
+    "nome": "Duna",
+    "editora": "Chilton Books",
+    "autora": "Frank Herbert",
+    "data_lancamento": "1965-08-01T00:00:00Z",
+    "categoria": "Ficção Científica",
+    "quantidade_estoque": 12
+  },
+  {
+    "_id": 22,
+    "nome": "Fundação",
+    "editora": "Gnome Press",
+    "autora": "Isaac Asimov",
+    "data_lancamento": "1951-06-01T00:00:00Z",
+    "categoria": "Ficção Científica",
+    "quantidade_estoque": 7
+  },
+  {
+    "_id": 23,
+    "nome": "Neuromancer",
+    "editora": "Ace Books",
+    "autora": "William Gibson",
+    "data_lancamento": "1984-07-01T00:00:00Z",
+    "categoria": "Ficção Científica",
+    "quantidade_estoque": 4
+  },
+  {
+    "_id": 24,
+    "nome": "O Guia do Mochileiro das Galáxias",
+    "editora": "Pan Books",
+    "autora": "Douglas Adams",
+    "data_lancamento": "1979-10-12T00:00:00Z",
+    "categoria": "Ficção Científica",
+    "quantidade_estoque": 9
+  },
+  {
+    "_id": 25,
+    "nome": "Eu, Robô",
+    "editora": "Gnome Press",
+    "autora": "Isaac Asimov",
+    "data_lancamento": "1950-12-02T00:00:00Z",
+    "categoria": "Ficção Científica",
+    "quantidade_estoque": 6
+  },
+
+  {
+    "_id": 26,
+    "nome": "Sapiens: Uma Breve História da Humanidade",
+    "editora": "Harper",
+    "autora": "Yuval Noah Harari",
+    "data_lancamento": "2011-01-01T00:00:00Z",
+    "categoria": "História",
+    "quantidade_estoque": 10
+  },
+  {
+    "_id": 27,
+    "nome": "Homo Deus: Uma Breve História do Amanhã",
+    "editora": "Harper",
+    "autora": "Yuval Noah Harari",
+    "data_lancamento": "2015-01-01T00:00:00Z",
+    "categoria": "História",
+    "quantidade_estoque": 7
+  },
+  {
+    "_id": 28,
+    "nome": "Armas, Germes e Aço",
+    "editora": "W.W. Norton",
+    "autora": "Jared Diamond",
+    "data_lancamento": "1997-03-01T00:00:00Z",
+    "categoria": "História",
+    "quantidade_estoque": 5
+  },
+  {
+    "_id": 29,
+    "nome": "O Diário de Anne Frank",
+    "editora": "Contact Publishing",
+    "autora": "Anne Frank",
+    "data_lancamento": "1947-06-25T00:00:00Z",
+    "categoria": "História",
+    "quantidade_estoque": 8
+  },
+  {
+    "_id": 30,
+    "nome": "História da Segunda Guerra Mundial",
+    "editora": "Penguin",
+    "autora": "Antony Beevor",
+    "data_lancamento": "2012-06-01T00:00:00Z",
+    "categoria": "História",
+    "quantidade_estoque": 6
+  }
+]

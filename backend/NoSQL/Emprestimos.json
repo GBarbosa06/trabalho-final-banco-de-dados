@@ -1,0 +1,92 @@
+[
+  {
+    "id_emprestimo": 1,
+    "id_livro": 2,
+    "nome_livro": "Crepúsculo",
+    "nome_pessoa": "Ana Carolina Souza",
+    "cpf": "123.456.789-00",
+    "data_emprestimo": "2025-11-01T10:30:00Z",
+    "data_devolucao": "2025-11-15T10:30:00Z"
+  },
+  {
+    "id_emprestimo": 2,
+    "id_livro": 5,
+    "nome_livro": "Amanhecer",
+    "nome_pessoa": "Bruno Almeida Santos",
+    "cpf": "321.654.987-10",
+    "data_emprestimo": "2025-11-03T14:00:00Z",
+    "data_devolucao": "2025-11-17T14:00:00Z"
+  },
+  {
+    "id_emprestimo": 3,
+    "id_livro": 8,
+    "nome_livro": "É Assim que Acaba",
+    "nome_pessoa": "Carla Menezes Ribeiro",
+    "cpf": "987.654.321-00",
+    "data_emprestimo": "2025-11-05T09:15:00Z",
+    "data_devolucao": "2025-11-19T09:15:00Z"
+  },
+  {
+    "id_emprestimo": 4,
+    "id_livro": 10,
+    "nome_livro": "A Seleção",
+    "nome_pessoa": "Diego Ferreira Lima",
+    "cpf": "456.789.123-22",
+    "data_emprestimo": "2025-11-06T16:45:00Z",
+    "data_devolucao": "2025-11-20T16:45:00Z"
+  },
+  {
+    "id_emprestimo": 5,
+    "id_livro": 13,
+    "nome_livro": "Trono de Vidro",
+    "nome_pessoa": "Elisa Rodrigues Martins",
+    "cpf": "159.753.486-01",
+    "data_emprestimo": "2025-11-07T11:00:00Z",
+    "data_devolucao": "2025-11-21T11:00:00Z"
+  },
+  {
+    "id_emprestimo": 6,
+    "id_livro": 18,
+    "nome_livro": "O Nome do Vento",
+    "nome_pessoa": "Fernando Costa Oliveira",
+    "cpf": "258.369.147-02",
+    "data_emprestimo": "2025-11-08T13:20:00Z",
+    "data_devolucao": "2025-11-22T13:20:00Z"
+  },
+  {
+    "id_emprestimo": 7,
+    "id_livro": 21,
+    "nome_livro": "Duna",
+    "nome_pessoa": "Gabriela Nunes Silva",
+    "cpf": "741.852.963-33",
+    "data_emprestimo": "2025-11-09T15:10:00Z",
+    "data_devolucao": "2025-11-23T15:10:00Z"
+  },
+  {
+    "id_emprestimo": 8,
+    "id_livro": 22,
+    "nome_livro": "Fundação",
+    "nome_pessoa": "Henrique Lopes Faria",
+    "cpf": "369.258.147-44",
+    "data_emprestimo": "2025-11-10T09:40:00Z",
+    "data_devolucao": "2025-11-24T09:40:00Z"
+  },
+  {
+    "id_emprestimo": 9,
+    "id_livro": 26,
+    "nome_livro": "Sapiens: Uma Breve História da Humanidade",
+    "nome_pessoa": "Isabela Prado Cunha",
+    "cpf": "555.666.777-88",
+    "data_emprestimo": "2025-11-11T10:05:00Z",
+    "data_devolucao": "2025-11-25T10:05:00Z"
+  },
+  {
+    "id_emprestimo": 10,
+    "id_livro": 29,
+    "nome_livro": "O Diário de Anne Frank",
+    "nome_pessoa": "João Victor Barros",
+    "cpf": "111.222.333-44",
+    "data_emprestimo": "2025-11-12T08:55:00Z",
+    "data_devolucao": "2025-11-26T08:55:00Z"
+  }
+]
